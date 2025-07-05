@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .slide-up {
+      animation: slideUp 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .checkmark-circle {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .checkmark-circle .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #10b981;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .checkmark-circle .checkmark {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      width: 40px;
+      height: 60px;
+      border: solid white;
+      border-width: 0 6px 6px 0;
+      transform: rotate(45deg);
+      animation: checkmarkDraw 0.6s ease-out forwards;
+    }
+
+    @keyframes checkmarkDraw {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+      100% {
+        width: 40px;
+        height: 60px;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-white min-h-screen flex flex-col items-center justify-center text-gray-800">
+
+  <div class="text-center px-6 md:px-12 fade-in">
+    <div class="checkmark-circle mx-auto mb-6">
+      <div class="circle"></div>
+      <div class="checkmark"></div>
+    </div>
+
+    <h1 class="text-4xl font-bold text-green-700 slide-up">Thank You, {{ name }}!</h1>
+    <p class="mt-4 text-lg text-gray-700 slide-up" style="animation-delay: 0.2s;">Your message has been received. We'll get back to you shortly.</p>
+
+    <a href="/" class="inline-block mt-8 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition slide-up" style="animation-delay: 0.4s;">
+      ← Back to Home
+    </a>
+  </div>
+
+</body>
+</html>

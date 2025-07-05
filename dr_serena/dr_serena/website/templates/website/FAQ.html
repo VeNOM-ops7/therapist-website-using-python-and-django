@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ | Dr. Serena Blake</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    .faq-section {
+      max-width: 900px;
+      margin: 100px auto 60px;
+      padding: 0 20px;
+    }
+
+    .faq-section h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #2c3e50;
+    }
+
+    .faq-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+      margin-bottom: 20px;
+      padding: 20px 30px;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .faq-card:hover {
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #0077cc;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      opacity: 0;
+      margin-top: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .faq-card.active .faq-answer {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-card.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .back-button {
+      display: block;
+      margin-top: 40px;
+      text-align: center;
+      color:rgb(206, 220, 230);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-button:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="navbar-container">
+    <h1 class="logo"><a href="/">Dr. Serena Blake</a></h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <h1>Frequently Asked Questions</h1>
+
+  <div class="faq-card" tabindex="0">
+    <div class="faq-question">
+      <span>Do you accept insurance?</span>
+      <span class="faq-icon">▼</span>
+    </div>
+    <div class="faq-answer">
+      No, but a superbill is provided for self-submission.
+    </div>
+  </div>
+
+  <div class="faq-card" tabindex="0">
+    <div class="faq-question">
+      <span>Are online sessions available?</span>
+      <span class="faq-icon">▼</span>
+    </div>
+    <div class="faq-answer">
+      Yes—all virtual sessions are offered via Zoom for your convenience and comfort.
+    </div>
+  </div>
+
+  <div class="faq-card" tabindex="0">
+    <div class="faq-question">
+      <span>What is your cancellation policy?</span>
+      <span class="faq-icon">▼</span>
+    </div>
+    <div class="faq-answer">
+      We require at least 24 hours’ notice for all cancellations or rescheduling.
+    </div>
+  </div>
+
+  <a href="/" class="back-button">← Back to Home</a>
+</section>
+
+<script>
+  const cards = document.querySelectorAll('.faq-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('active');
+    });
+    card.addEventListener('keypress', e => {
+      if (e.key === 'Enter') {
+        card.classList.toggle('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

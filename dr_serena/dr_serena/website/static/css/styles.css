@@ -1,0 +1,748 @@
+/* Navbar */
+.navbar {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('{% static "img/hero-bg.jpg" %}') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 70px; /* offset for fixed navbar */
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background: #007bff;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content h2 {
+    font-size: 1.1rem;
+  }
+  .cta-button {
+    padding: 12px 24px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+
+.about, .services, .faq, .contact {
+  max-width: 800px;
+  margin: auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+form button {
+  padding: 10px 20px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url('/static/img/shifaaz-shamoon-sLAk1guBG90-unsplash.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e55b5b;
+}
+
+.about-page {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+.about-photo {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+  transform: scale(1.05);
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+.services-page {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.services-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.service img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-text {
+  max-width: 600px;
+}
+
+.service-text h2 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.service-text p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0066cc;
+}
+.services-page .service-text a {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SERVICES PAGE STYLING */
+.services-page {
+  padding: 60px 20px;
+  background-color: #f7fafd;
+  text-align: center;
+}
+
+.services-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #2c3e50;
+}
+
+.services-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.service-card {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.service-overlay {
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  text-align: left;
+}
+
+.service-overlay h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.service-overlay p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #004d99;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-image {
+    height: 220px;
+  }
+
+  .service-overlay h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* FAQ SECTION */
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-container h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  background-color: #fff;
+  text-align: left;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.faq-item h2 {
+  font-size: 1.3rem;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+.faq-item a {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: bold;
+}/* ====== BASE RESET ====== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  background-color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+/* ====== CONTACT SECTION ====== */
+.contact-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.7s ease;
+}
+
+.contact-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* ====== FORM ELEMENTS ====== */
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 28px;
+  animation: fadeInUp 0.5s ease;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0077cc;
+}
+
+.contact-form label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #888;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+}
+
+.contact-form input:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+  top: -14px;
+  font-size: 0.85rem;
+  color: #0077cc;
+}
+
+/* ====== CHECKBOX GROUP ====== */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.3);
+}
+
+/* ====== ERROR MESSAGE STYLES ====== */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ====== SUBMIT BUTTON ====== */
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #91bbd8;
+  transform: scale(1.02);
+}
+
+/* ====== BACK BUTTON ====== */
+.back-button {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ebeff1;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media screen and (max-width: 600px) {
+  .contact-container {
+    padding: 25px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* ===== SUCCESS POPUP ===== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: popIn 0.4s ease forwards;
+}
+
+.popup-content h2 {
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  color: #555;
+}
+
+/* Animations */
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hidden by default */
+.hidden {
+  display: none;
+}
+
+.fees-section {
+  margin-top: 50px;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.fees-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.fees-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.fees-list li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.fees-note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.about-photo {
+  max-width: 400px;
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+.quick-info h2 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.quick-info ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.quick-info ul li {
+  margin-bottom: 10px;
+  color: #444;
+}
+.quick-info ul li a {
+  color: #0077cc;
+  text-decoration: none;
+}

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Serena Blake | Psychologist</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<!-- 🌐 NAVBAR -->
+<header class="navbar">
+  <div class="navbar-container">
+    <h1 class="logo"><a href="/">Dr. Serena Blake</a></h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- 🌟 HERO SECTION -->
+<section class="hero">
+  <div class="overlay">
+    <div class="hero-content fade-in">
+      <h1>Welcome to Dr. Serena Blake’s Practice</h1>
+      <h2>Your Journey to Mental Clarity Begins Here</h2>
+      <a href="/contact/" class="cta-button">Book a Free Consult</a>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
+

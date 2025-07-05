@@ -1,0 +1,82 @@
+{% load static %}
+<header class="navbar">
+  <div class="navbar-container">
+    <h1 class="logo"><a href="/">Dr. Serena Blake</a></h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Dr. Serena Blake</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<section class="services-page">
+    <div class="services-container">
+      <h1>Our Services</h1>
+
+    <div class="service-card">
+      <div class="service-image" style="background-image: url('{% static 'img/premium_photo-1672292536170-8de3ec091ced.avif' %}')">
+        <div class="service-overlay">
+          <h2>Anxiety & Stress Management</h2>
+          <p>
+            <b>
+            Learn effective strategies to manage anxiety and reduce stress. These sessions equip you with tools for long-term emotional balance.
+          </b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-image" style="background-image: url('{% static 'img/premium_photo-1664910375061-ab65240eeb0d.avif' %}')">
+        <div class="service-overlay">
+          <h2>Relationship Counseling</h2>
+          <p>
+            <b>
+            Navigate relationship challenges with support. For individuals or couples, reconnect with deeper communication and empathy.
+          </b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-image" style="background-image: url('{% static 'img/premium_photo-1664643217182-dbcf9c719aa1.avif' %}')">
+        <div class="service-overlay">
+          <h2>Trauma Recovery</h2>
+          <p>
+            <b> 
+            Specialized therapy to help you heal from past trauma. Dr. Blake uses evidence-based techniques to support your recovery journey.
+          </b></p>
+        </div>
+        </div>
+    </div>
+      
+  <div class="fees-section">
+  <h2>Session Fees</h2>
+  <ul class="fees-list">
+    <li><strong>$200</strong> — Individual Therapy (50 mins)</li>
+    <li><strong>$240</strong> — Couples Counseling (60 mins)</li>
+    <li><strong>$180</strong> — Online Sessions (Zoom)</li>
+  </ul>
+  <p class="fees-note">* Superbills provided for insurance reimbursement.</p>
+</div>
+    </div>
+  </div>
+    <a href="/" class="back-button">← Back to Home</a>
+</section>
+
+</body>
+</html>
